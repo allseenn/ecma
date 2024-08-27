@@ -38,3 +38,7 @@ student2.displayInfo();
 // Age: 17
 // Grade: 11th grade"
 ```
+
+### Решение
+
+[script.js](script.js)
