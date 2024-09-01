@@ -125,4 +125,21 @@ for (let index = 0; index < 10; index++) {
     robots.push(new Samba(index));
 }
 
-console.log(robots.constructor.prototype);
+function createObject(constructor) {
+    const obj = {};
+    Object.setPrototypeOf(obj, constructor.prototype);
+    const argsArray = Array.prototype.slice.apply(arguments);
+    const result = constructor.apply(obj, argsArray.slice(1));
+    if (!result || typeof result === 'string' || typeof result
+        === 'number' || typeof result === 'boolean') {
+        return obj
+    } else {
+        return result;
+    }
+}
+
+const Samba2 = createObject(Samba, 1014778);
+console.log(Samba2.serialNumber); // 1014778
+console.log(Samba2.__proto__);
+console.log(Samba2.startCleaning());
+console.log(Samba1.constructor); 
