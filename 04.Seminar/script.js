@@ -71,7 +71,6 @@ tasker(tasks)
 // Если происходит ошибка, она ловится и выводится сообщение об ошибке. 
 // Функция main также объявлена как асинхронная с использованием ключевого слова async. 
 // В конце вызывается функция main для запуска процесса получения данных.
-
 async function getData() {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await response.json();
