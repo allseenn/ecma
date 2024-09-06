@@ -41,3 +41,7 @@ saveUserData использует fetch для отправки данных о 
 changeStyleDelayed('myElement', 2000); 
 // Через 2 секунды изменяет стиль элемента с id 'myElement'"
 ```
+
+## Решение
+
+[script.js](script.js)
