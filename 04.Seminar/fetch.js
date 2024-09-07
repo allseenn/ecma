@@ -1,20 +1,14 @@
-// let object;
+const URL = 'https://jsonplaceholder.typicode.com/users';
 
-// async function fetchData() {
-//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
-//     object = await response.json();
-//     return object;
-// }
+const getData2 = async (url) => {
+    try {
+        const res = await fetch(url);
+        const json = await res.json();
+        return json;
+    } catch (error) {
+        console.log(error.message);
+    }
+};
 
-// console.log(fetchData());
-
-let obj;
-
-fetch("https://jsonplaceholder.typicode.com/users").then(response => {
-    export const obj = response.json();
-    return obj;
-}).then(data => {
-    console.log(data);
-});
-
-console.log(obj);
+const data2 = await getData2(URL);
+console.log(data2);
